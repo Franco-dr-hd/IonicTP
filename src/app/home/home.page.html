@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-button expand="full" color="secondary" routerLink="/auth">
+    <ion-icon name="log-in" slot="start"></ion-icon>
+    Iniciar Sesión / Registrarse
+  </ion-button>
+  
+  <ion-toolbar color="primary">
+    <ion-title>Catálogo de Productos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" *ngFor="let product of products">
+        <ion-card>
+          <img [src]="product.image" alt="{{ product.name }}" />
+          <ion-card-header>
+            <ion-card-title>{{ product.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{ product.description }}</p>
+            <p><strong>Precio: {{ product.price | currency }}</strong></p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<header><ion-button expand="full" color="secondary" routerLink="/auth">
+  <ion-icon name="log-in" slot="start"></ion-icon>
+  Iniciar Sesión / Registrarse
+</ion-button></header>
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Fondo del jugador Ma Long -->
+  <div class="background">
+    <div class="overlay"></div>
+
+    <!-- Texto de bienvenida -->
+    <div class="welcome">
+      <h1>Bienvenido a PingPong App</h1>
+      <p>Tu tienda de tenis de mesa favorita.</p>
+    </div>
+
+    <!-- Botones de navegación -->
+    <ion-grid>
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="12" size-md="4">
+          <ion-button expand="block" color="light" routerLink="/products/maderas">
+            <ion-icon name="construct" slot="start"></ion-icon>
+            Maderas
+          </ion-button>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <ion-button expand="block" color="light" routerLink="/products/gomas">
+            <ion-icon name="tennisball" slot="start"></ion-icon>
+            Gomas
+          </ion-button>
+        </ion-col>
+        <ion-col size="12" size-md="4">
+          <ion-button expand="block" color="light" routerLink="/products/remeras">
+            <ion-icon name="shirt" slot="start"></ion-icon>
+            Remeras
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

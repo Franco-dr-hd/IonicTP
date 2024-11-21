@@ -1,0 +1,27 @@
+<ion-menu side="start" menuId="main-menu" contentId="content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item button routerLink="/home">
+        <ion-icon name="home" slot="start"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-item>
+      <ion-item button routerLink="/products/maderas">
+        <ion-icon name="construct" slot="start"></ion-icon>
+        <ion-label>Maderas</ion-label>
+      </ion-item>
+      <ion-item button routerLink="/products/gomas">
+        <ion-icon name="tennisball" slot="start"></ion-icon>
+        <ion-label>Gomas</ion-label>
+      </ion-item>
+      <ion-item button routerLink="/products/remeras">
+        <ion-icon name="shirt" slot="start"></ion-icon>
+        <ion-label>Remeras</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-menu>

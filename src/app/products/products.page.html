@@ -1,0 +1,43 @@
+<ion-segment (ionChange)="segmentChanged($event)" value="maderas">
+  <ion-segment-button value="maderas">
+    <ion-label>Maderas</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="gomas">
+    <ion-label>Gomas</ion-label>
+  </ion-segment-button>
+  <ion-segment-button value="remeras">
+    <ion-label>Remeras</ion-label>
+  </ion-segment-button>
+</ion-segment>
+
+<ion-content>
+  <ion-list *ngIf="selectedCategory === 'maderas'">
+    <ion-item *ngFor="let product of maderas">
+      <ion-label>
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <strong>{{ product.price | currency }}</strong>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="selectedCategory === 'gomas'">
+    <ion-item *ngFor="let product of gomas">
+      <ion-label>
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <strong>{{ product.price | currency }}</strong>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list *ngIf="selectedCategory === 'remeras'">
+    <ion-item *ngFor="let product of remeras">
+      <ion-label>
+        <h2>{{ product.name }}</h2>
+        <p>{{ product.description }}</p>
+        <strong>{{ product.price | currency }}</strong>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
